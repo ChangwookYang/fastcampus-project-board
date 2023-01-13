@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  project-board-database:
+    container_name: project-board-database
+    build:
+      dockerfile: Dockerfile
+      context: ./database
+    image: ycw92325/project-board-database
+    environment:
+      - MARIADB_DATABASE=project-board
+      - MARIADB_ROOT_PASSWORD=${SPRING_DATASOURCE_PASSWORD}
+    volumes:
+      - ./database/config:/etc/mysql/conf.d
+      - ./database/init:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
