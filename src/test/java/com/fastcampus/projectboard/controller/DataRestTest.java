@@ -1,5 +1,6 @@
 package com.fastcampus.projectboard.controller;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @AutoCOnfigureMockMvc 는 MockMvc의 존재를 알수 없으므로 추가
  * @Transactional 을 넣으면 기본동작은 롤백이다. 따라서 DB에 영향을 안주고 테스트할 수 있다.
  */
+@Disabled("Spring Data REST 통합테스트는 불필요하므로 제외시킴")
 @Transactional
 @DisplayName("Data Rest 테스트")
 @AutoConfigureMockMvc
