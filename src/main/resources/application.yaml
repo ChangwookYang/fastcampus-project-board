@@ -41,6 +41,7 @@ spring:
     properties:
       hibernate.format_sql: true
       hibernate.default_batch_fetch_size: 100
+    database-platform: org.hibernate.dialect.MySQL8Dialect
   sql.init.mode: always
   data:
     rest:
