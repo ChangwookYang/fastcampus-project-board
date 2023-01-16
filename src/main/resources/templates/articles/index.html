@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <title>게시판 페이지</title>
@@ -7,68 +8,17 @@
 
 <body>
 
-    <header th:replace="~{header :: header}"></header>
+<header th:replace="header :: header"></header>
+<header id="header"></header>
 
-    <main>
-        <form>
-            <label for="search-type" hidden>유형</label>
-            <select id="search-type" name="search-type">
-                <option>제목</option>
-                <option>본문</option>
-                <option>ID</option>
-                <option>닉네임</option>
-                <option>해시태그</option>
-            </select>
-            <label for="search-value" hidden>검색어</label>
-            <input id="search-value" type="search" placeholder="검색어..." name="search-value">
-            <button type="submit">검색</button>
-        </form>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>제목</th>
-                    <th>해시태그</th>
-                    <th>작성자</th>
-                    <th>작성일</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>첫글</td>
-                    <td>#java</td>
-                    <td>욱창양</td>
-                    <td>2022-0101</td>
-                </tr>
-                <tr>
-                    <td>2글</td>
-                    <td>#java</td>
-                    <td>욱창양</td>
-                    <td>2022-0103</td>
-                </tr>
-                <tr>
-                    <td>3글</td>
-                    <td>#java</td>
-                    <td>욱창양</td>
-                    <td>2022-0106</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <nav>
-            <table>
-                <tr>
-                    <td>prev</td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>next</td>
-                </tr>
-            </table>
+<main>
+    <form>
+        @@ -69,7 +69,7 @@
         </nav>
-    </main>
+</main>
 
-    <header th:replace="~{footer :: footer}"></header>
+<footer th:replace="footer :: footer"></footer>
+<footer id="footer"></footer>
 
 </body>
 </html>
